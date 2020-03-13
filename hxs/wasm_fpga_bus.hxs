@@ -1,0 +1,100 @@
+HwSwIf WasmFpgaBus {
+    GeneralConfiguration {
+        RelativePathToTopXsl { "hwswif_addon_sen/HwSwIfPhys.xsl" ; }
+        Language = 'English';
+        HwSwIfDialect = 4;
+        SuppressTrfColumn = 'Yes';
+        UseVhdlRecords = 'Yes';
+        UseVhdlModUpInterface = 'No';
+        UseVhdlAcceleratedRdWrDiff = 'Yes';
+        KeysDescription {
+            "Keys: ";
+            "";
+            "Access types: ";
+            "R = Read ";
+            "W = Write ";
+            "RW = Write and Read back exactly what was written last time";
+            "RorW = Write one value, eg. transmit data or read other value, eg. receive data";
+            "";
+            "Default: ";
+            "Binary(0b) or hex(0x) value the respective bits are set to, when one of the reset conditions in the following colums occurs or";
+            "- = if nothing is stored, thus nothing can be reset";
+            "undef = undefined or";
+            "const = containing a constant value not affected by any reset";
+            "";
+            "Columns right of the default column contain a reset cause in the header row of the table and in the table itself:";
+            "- = bits are not affected by this reset";
+            "X = bits are set immediately to default value by this reset";
+            "F = bits are set to default value by connected function when this reset occurs";
+            "";
+            "Reserved Bits within registers have an undefined value when read and should be written as read before when written";
+            "";
+            "Reserved values: ";
+            "* = all values of this bit/nibble position are reserved combinations";
+            "r = remaining not previously noted combinations of this bit/nibble positions are reserved values";
+            "";
+            "It is forbidden to write reserved combinations to registers";
+            "";
+            "[Hw: ...........] = = Supplementary information about HW implementation, for HW review purposes only";
+        }
+        AddressBusBitWidth = 24;
+        SimAbsoluteStartAddress = 0x000000;
+        HeaderValueBeginColumn = 100;
+        FileBeginCHeader {
+            "";
+        }
+        FileEndCHeader {
+            "";
+        }
+        FileBeginCStruct {
+            "";
+        }
+        FileEndCStruct {
+            "";
+        }
+        FileVhdlPackageVersion {
+            "";
+        }
+        FileBeginVhdlHeader {
+            "";
+        }
+        FileEndVhdlHeader {
+            "";
+        }
+        FileBeginVhdlRegister {
+            "";
+        }
+        FileEndVhdlRegister {
+            "";
+        }
+        FileBeginVhdlTestBench {
+            "";
+        }
+        FileEndVhdlTestBench {
+            "";
+        }
+        BlockAddressSegmentSizes = [ 0x40 ];
+    }
+
+    Block BusBlk ( Base = 0x0, Size = 0x40 ) {
+        BlockName { "WebAssembly Bus Block" ; }
+        BlockDescription { "Register description of the WebAssembly Bus Block" ; }
+        BlockBusDescription { ""; }
+        BlockAddressSegment = 0;
+        BlockResets {
+            BlockReset { Pwr BlockResetDescription { "Power On Reset" ; } }
+        }
+        FieldAreaDelegated ModuleArea ( Width = 32, AddrLowest=0x0 to AddrUtmost = 0xC) {
+            FieldName { "WebAssembly Module"; }
+            FieldDescription { ""; }
+        }
+        FieldAreaDelegated StackArea ( Width = 32, AddrLowest=0x10 to AddrUtmost = 0x1C) {
+            FieldName { "WebAssembly Stack"; }
+            FieldDescription { ""; }
+        }
+        FieldAreaDelegated StoreArea ( Width = 32, AddrLowest=0x20 to AddrUtmost = 0x3C) {
+            FieldName { "WebAssembly Store"; }
+            FieldDescription { ""; }
+        }
+    }
+}
