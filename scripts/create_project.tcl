@@ -48,7 +48,6 @@ if {[string equal [get_filesets -quiet sources_1] ""]} {
 set obj [get_filesets sources_1]
 set files_vhd [list \
  [file normalize "${project_src}/WasmFpgaBus.vhd" ]\
- [file normalize "${project_src}/WasmFpgaBusPackage.vhd" ]\
  [file normalize "${project_src_gen}/vhd_gen/header/wasm_fpga_bus_header.vhd" ]\
  [file normalize "${project_src_gen}/vhd_gen/wishbone/wasm_fpga_bus_wishbone.vhd" ]\
  [file normalize "${project_package}/component.xml" ]\
