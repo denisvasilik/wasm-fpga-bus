@@ -424,7 +424,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>072e317f</spirit:value>
+            <spirit:value>757675ca</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -445,7 +445,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>072e317f</spirit:value>
+            <spirit:value>757675ca</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1022,10 +1022,6 @@
     <spirit:fileSet>
       <spirit:name>xilinx_anylanguagesynthesis_view_fileset</spirit:name>
       <spirit:file>
-        <spirit:name>../src/WasmFpgaBusPackage.vhd</spirit:name>
-        <spirit:fileType>vhdlSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
         <spirit:name>../hxs_gen/vhd_gen/header/wasm_fpga_bus_header.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
@@ -1036,7 +1032,7 @@
       <spirit:file>
         <spirit:name>../src/WasmFpgaBus.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
-        <spirit:userFileType>CHECKSUM_a0ce0ed5</spirit:userFileType>
+        <spirit:userFileType>CHECKSUM_6706977e</spirit:userFileType>
       </spirit:file>
     </spirit:fileSet>
     <spirit:fileSet>
@@ -1061,10 +1057,6 @@
     </spirit:fileSet>
     <spirit:fileSet>
       <spirit:name>xilinx_anylanguagebehavioralsimulation_view_fileset</spirit:name>
-      <spirit:file>
-        <spirit:name>../src/WasmFpgaBusPackage.vhd</spirit:name>
-        <spirit:fileType>vhdlSource</spirit:fileType>
-      </spirit:file>
       <spirit:file>
         <spirit:name>../hxs_gen/vhd_gen/header/wasm_fpga_bus_header.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
@@ -1116,17 +1108,25 @@
         <xilinx:taxonomy>AXI_Peripheral</xilinx:taxonomy>
       </xilinx:taxonomies>
       <xilinx:displayName>WebAssembly Bus IP</xilinx:displayName>
-      <xilinx:coreRevision>25</xilinx:coreRevision>
-      <xilinx:coreCreationDateTime>2020-02-19T21:52:12Z</xilinx:coreCreationDateTime>
+      <xilinx:coreRevision>26</xilinx:coreRevision>
+      <xilinx:coreCreationDateTime>2020-07-21T18:31:25Z</xilinx:coreCreationDateTime>
       <xilinx:tags>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@789d3378_ARCHIVE_LOCATION">/home/ubuntu-dev/git/webassembly/wasm-fpga-bus/package</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@55c9c8a0_ARCHIVE_LOCATION">/home/ubuntu-dev/git/webassembly/wasm-fpga-bus/package</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@98118eb_ARCHIVE_LOCATION">/home/ubuntu-dev/git/webassembly/wasm-fpga-bus/package</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5503c1a5_ARCHIVE_LOCATION">/home/ubuntu-dev/git/webassembly/wasm-fpga-bus/package</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4293b230_ARCHIVE_LOCATION">/home/ubuntu-dev/git/webassembly/wasm-fpga-bus/package</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2af79e1b_ARCHIVE_LOCATION">/home/ubuntu-dev/git/webassembly/wasm-fpga-bus/package</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@37e4f928_ARCHIVE_LOCATION">/home/ubuntu-dev/git/webassembly/wasm-fpga-bus/package</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@40c80851_ARCHIVE_LOCATION">/home/ubuntu-dev/git/webassembly/wasm-fpga-bus/package</xilinx:tag>
       </xilinx:tags>
     </xilinx:coreExtensions>
     <xilinx:packagingInfo>
       <xilinx:xilinxVersion>2019.2</xilinx:xilinxVersion>
       <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="8a8444be"/>
-      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="ac0ed846"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="a0bd209a"/>
       <xilinx:checksum xilinx:scope="ports" xilinx:value="b2f5fc9b"/>
-      <xilinx:checksum xilinx:scope="parameters" xilinx:value="89681c72"/>
+      <xilinx:checksum xilinx:scope="parameters" xilinx:value="f0c6b6dc"/>
     </xilinx:packagingInfo>
   </spirit:vendorExtensions>
 </spirit:component>
