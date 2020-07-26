@@ -73,10 +73,10 @@ HwSwIf WasmFpgaBus {
         FileEndVhdlTestBench {
             "";
         }
-        BlockAddressSegmentSizes = [ 0x300 ];
+        BlockAddressSegmentSizes = [ 0x20000 ];
     }
 
-    Block BusBlk ( Base = 0x0, Size = 0x300) {
+    Block BusBlk ( Base = 0x0, Size = 0x20000) {
         BlockName { "WebAssembly Bus Block" ; }
         BlockDescription { "Register description of the WebAssembly Bus Block" ; }
         BlockBusDescription { ""; }
@@ -94,6 +94,10 @@ HwSwIf WasmFpgaBus {
         }
         FieldAreaDelegated StoreArea ( Width = 32, AddrLowest=0x200 to AddrUtmost = 0x2FC) {
             FieldName { "WebAssembly Store"; }
+            FieldDescription { ""; }
+        }
+        FieldAreaDelegated MemoryArea ( Width = 32, AddrLowest=0x10000 to AddrUtmost = 0x1FFFF) {
+            FieldName { "WebAssembly Memory Index 0 (1 Page)"; }
             FieldDescription { ""; }
         }
     }

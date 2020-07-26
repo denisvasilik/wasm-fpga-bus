@@ -8,9 +8,9 @@ entity WasmFpgaBus is
     nRst : in std_logic;
     Adr : in std_logic_vector(23 downto 0);
     Sel : in std_logic_vector(3 downto 0);
-    DatIn : in std_logic_vector(31 downto 0); 
+    DatIn : in std_logic_vector(31 downto 0);
     We : in std_logic;
-    Stb : in std_logic; 
+    Stb : in std_logic;
     Cyc : in std_logic_vector(0 downto 0);
     DatOut : out std_logic_vector(31 downto 0);
     Ack : out std_logic;
@@ -37,7 +37,15 @@ entity WasmFpgaBus is
     StoreArea_DatOut : out std_logic_vector(31 downto 0);
     StoreArea_DatIn: in std_logic_vector(31 downto 0);
     StoreArea_Ack : in std_logic;
-    StoreArea_Cyc : out std_logic
+    StoreArea_Cyc : out std_logic;
+    MemoryArea_Adr : out std_logic_vector(23 downto 0);
+    MemoryArea_Sel : out std_logic_vector(3 downto 0);
+    MemoryArea_We : out std_logic;
+    MemoryArea_Stb : out std_logic;
+    MemoryArea_DatOut : out std_logic_vector(31 downto 0);
+    MemoryArea_DatIn: in std_logic_vector(31 downto 0);
+    MemoryArea_Ack : in std_logic;
+    MemoryArea_Cyc : out std_logic
   );
 end entity WasmFpgaBus;
 
@@ -79,7 +87,15 @@ architecture WasmFpgaBusArchitecture of WasmFpgaBus is
       StoreArea_DatOut : out std_logic_vector(31 downto 0);
       StoreArea_DatIn: in std_logic_vector(31 downto 0);
       StoreArea_Ack : in std_logic;
-      StoreArea_Cyc : out std_logic
+      StoreArea_Cyc : out std_logic;
+      MemoryArea_Adr : out std_logic_vector(23 downto 0);
+      MemoryArea_Sel : out std_logic_vector(3 downto 0);
+      MemoryArea_We : out std_logic;
+      MemoryArea_Stb : out std_logic;
+      MemoryArea_DatOut : out std_logic_vector(31 downto 0);
+      MemoryArea_DatIn: in std_logic_vector(31 downto 0);
+      MemoryArea_Ack : in std_logic;
+      MemoryArea_Cyc : out std_logic
     );
   end component;
 
@@ -132,7 +148,15 @@ architecture WasmFpgaBusArchitecture of WasmFpgaBus is
         StoreArea_DatOut => StoreArea_DatOut,
         StoreArea_DatIn => StoreArea_DatIn,
         StoreArea_Ack => StoreArea_Ack,
-        StoreArea_Cyc => StoreArea_Cyc
+        StoreArea_Cyc => StoreArea_Cyc,
+        MemoryArea_Adr => MemoryArea_Adr,
+        MemoryArea_Sel => MemoryArea_Sel,
+        MemoryArea_We => MemoryArea_We,
+        MemoryArea_Stb => MemoryArea_Stb,
+        MemoryArea_DatOut => MemoryArea_DatOut,
+        MemoryArea_DatIn => MemoryArea_DatIn,
+        MemoryArea_Ack => MemoryArea_Ack,
+        MemoryArea_Cyc => MemoryArea_Cyc
       );
 
 end;
