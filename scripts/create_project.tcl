@@ -3,7 +3,7 @@ set project_work  "work"
 set project_name "WasmFpgaBus"
 set project_part "xc7a100tcsg324-1"
 set project_src  "src"
-set project_src_gen "hxs_gen"
+set project_resources "resources"
 set project_ip "ip"
 set project_tb "tb"
 set project_package "package"
@@ -48,8 +48,8 @@ if {[string equal [get_filesets -quiet sources_1] ""]} {
 set obj [get_filesets sources_1]
 set files_vhd [list \
  [file normalize "${project_src}/WasmFpgaBus.vhd" ]\
- [file normalize "${project_src}/resources/wasm_fpga_bus_header.vhd" ]\
- [file normalize "${project_src}/resources/wasm_fpga_bus_wishbone.vhd" ]\
+ [file normalize "${project_resources}/wasm_fpga_bus_header.vhd" ]\
+ [file normalize "${project_resources}/wasm_fpga_bus_wishbone.vhd" ]\
  [file normalize "${project_package}/component.xml" ]\
 ]
 add_files -norecurse -fileset $obj $files_vhd
@@ -81,7 +81,7 @@ if {[string equal [get_filesets -quiet sim_1] ""]} {
 set obj [get_filesets sim_1]
 set files [list \
  "[file normalize "${project_tb}/tb_WasmFpgaBus.vhd"]"\
- "[file normalize "${project_tb}/tb_FileIO.vhd"]"\
+ "[file normalize "${project_tb}/tb_FileIo.vhd"]"\
  "[file normalize "${project_tb}/tb_pkg_helper.vhd"]"\
  "[file normalize "${project_tb}/tb_pkg.vhd"]"\
  "[file normalize "${project_tb}/tb_std_logic_1164_additions.vhd"]"\
