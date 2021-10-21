@@ -30,32 +30,39 @@ setuptools.setup(
     dependency_links=[],
     package_dir={},
     package_data={},
-    data_files=[
-        ("wasm-fpga-bus/package", ["package/component.xml"]),
-        ("wasm-fpga-bus/package/bd", ["package/bd/bd.tcl"]),
-        ("wasm-fpga-bus/package/xgui", ["package/xgui/wasm_fpga_bus_v1_0.tcl"]),
-        (
-            "wasm-fpga-bus/resources",
-            [
-                "resources/wasm_fpga_bus_header.vhd",
-                "resources/wasm_fpga_bus_direct.vhd",
-                "resources/wasm_fpga_bus_indirect.vhd",
-                "resources/wasm_fpga_bus_wishbone.vhd",
-            ],
-        ),
-        ("wasm-fpga-bus/src", ["src/WasmFpgaBus.vhd"]),
-        (
-            "wasm-fpga-bus/tb",
-            [
-                "tb/tb_pkg_helper.vhd",
-                "tb/tb_pkg.vhd",
-                "tb/tb_std_logic_1164_additions.vhd",
-                "tb/tb_Types.vhd",
-                "tb/tb_FileIo.vhd",
-                "tb/tb_WasmFpgaBus.vhd",
-            ],
-        ),
-        ("wasm-fpga-bus", ["CHANGELOG.md", "AUTHORS", "LICENSE"]),
+    data_files=[(
+        "wasm-fpga-bus/package", [
+            "package/component.xml"
+        ]),(
+        "wasm-fpga-bus/package/bd", [
+            "package/bd/bd.tcl"
+        ]),(
+        "wasm-fpga-bus/package/xgui", [
+            "package/xgui/wasm_fpga_bus_v1_0.tcl"
+        ]),(
+        "wasm-fpga-bus/resources", [
+            "resources/wasm_fpga_bus_header.vhd",
+            "resources/wasm_fpga_bus_wishbone.vhd",
+        ]),(
+        "wasm-fpga-bus/src", [
+            "src/WasmFpgaBus.vhd"
+        ]),(
+        "wasm-fpga-bus/tb", [
+            "tb/tb_pkg_helper.vhd",
+            "tb/tb_pkg.vhd",
+            "tb/tb_std_logic_1164_additions.vhd",
+            "tb/tb_Types.vhd",
+            "tb/tb_FileIo.vhd",
+            "tb/tb_WasmFpgaBus.vhd",
+        ]),(
+        'wasm-fpga-bus/simstm', [
+            'simstm/WasmFpgaBus.stm',
+        ]),(
+        "wasm-fpga-bus", [
+            "CHANGELOG.md",
+            "AUTHORS",
+            "LICENSE"
+        ])
     ],
     setup_requires=[],
     install_requires=[],
